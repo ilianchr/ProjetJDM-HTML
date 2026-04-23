@@ -32,6 +32,39 @@ h2 {
     color: white;
 }
 
+.catalog-header {
+    background-color: black;
+    padding: 80px 2rem 4rem 2rem;
+    text-align: center;
+    margin-top: 0;
+}
+
+.catalog-header-label {
+    color: red;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin: 0 0 1rem 0;
+    text-transform: uppercase;
+}
+
+.catalog-header-title {
+    color: white;
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin: 0 0 1rem 0;
+    line-height: 1.2;
+}
+
+.catalog-header-description {
+    color: #ccc;
+    font-size: 1rem;
+    margin: 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #main_pres_catalog {
     background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),url("../IMG/R34mainbg.png");
     background-position: center;
