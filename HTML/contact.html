@@ -15,14 +15,14 @@
                 <a href="contact.html">Contact</a>
             </nav>
         </header>
-        <section>
+        <section class="bandeau">
             <h3>CONTACTEZ NOUS</h3>
             <h1>Parlons de votre projet</h1>
             <p>Notre équipe est à votre disposition pour répondre à toutes vos questions.</p>
         </section>
-        <section id = "contact_section_s2">
-            <div>
-                <h4>Informations de contact</h4>
+        <section class = "contact_section_s2">
+            <div class="information">
+                <h2>Informations de contact</h2>
                 <h3>Téléphone</h3>
                 <p>+33 1 23 45 67 89</p>
                 <h3>Email</h3>
@@ -34,25 +34,38 @@
                 <p>Samedi: 10h - 18h</p>
                 <p>Dimanche: Sur rendez-vous</p>
             </div>
-            <div>
-                <form>
-                    <label for="name">Nom:</label>
-                    <input type="text" id="name" name="name" required>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                    <label for="tel">Téléphone:</label>
-                    <input type="tel" id="tel" name="tel" required>
-                    <label for="subject">Sujet:</label>
-                    <select id="subject" name="subject" required>
-                        <option value="">Sélectionnez un sujet</option>
-                        <option value="Demande d'information">Demande d'information</option>
-                        <option value="Import personalisé">Import personalisé</option>
-                        <option value="Service après vente">Service après vente</option>
-                        <option value="Autre">Autre</option>
-                    </select>
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" required></textarea>
-                    <input type="button" value="Envoyer">
+            <div >
+                <form class="form_info">
+                    <div class="name">
+                        <label for="name">Nom complet:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="mail_tel">
+                        <div class="mail">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="tel">
+                            <label for="tel">Téléphone:</label>
+                            <input type="tel" id="tel" name="tel" required>
+                        </div>
+                    </div>
+                    <div class="subject">
+                        <label for="subject">Sujet:</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Sélectionnez un sujet</option>
+                            <option value="Demande d'information">Demande d'information</option>
+                            <option value="Import personalisé">Import personalisé</option>
+                            <option value="Service après vente">Service après vente</option>
+                            <option value="Autre">Autre</option>
+                        </select>
+                    </div>
+                    <div class="message">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <input class ="envoyer_formulaire" type="button" value="Envoyer le message">
                 </form>
             </div>
         </section>
