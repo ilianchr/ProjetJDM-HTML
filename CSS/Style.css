@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: Helvetica, sans-serif;
+    padding-top: 60px;
 }
 
 .nav {
@@ -18,19 +19,30 @@ body {
     box-sizing: border-box;
 
     background: rgb(0, 0, 0);
+    border-bottom: rgb(49, 49, 49) solid 1px;
 }
-a{
+.nav h2 {
+  margin-right: auto;
+}
+a {
     color: white;
     text-decoration: none;
 }
 
-hr{
+hr {
     background-color: gray;
     margin: 2rem 0;
 }
 h2 {
     color: white;
 }
+input[type="button"] {
+    color: white;
+    background-color: red;
+    border: none;
+    cursor: pointer;
+}
+
 
 .catalog-header {
     background-color: black;
@@ -83,7 +95,7 @@ h2 {
     box-sizing: border-box;
 }
 
-#main_pres_content {
+.main_pres_content {
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -91,36 +103,32 @@ h2 {
 
 h3 {
     color: red;
+}
+.title_h3 {
     margin-bottom: 2rem;
 }
 
-#main_presc_h1 {
+.main_presc_h1 {
     color: white;
     font-size: 6rem;
     margin-top: 0;
     margin-bottom: 1rem;
 }
 
-#main_presc_p {
+.main_presc_p {
     color: white;
     font-size: 1.2rem;
     margin-bottom: 2rem;
 }
 
-#main_presc_btn {
+.main_presc_btn {
     margin-top: 2rem;
     width: fit-content;
     padding: 1rem 1.5rem;
     font-size: 1rem;
-    color: white;
-    background-color: red;
-    border: none;
-    cursor: pointer;
 }
 
-
-
-#main_pres_expertise{
+.main_pres_expertise {
     height: 100vh;
     display: flex;
     flex-direction: row;
@@ -128,33 +136,34 @@ h3 {
     padding-top: 5%;
 }
 
-
-#main_pres_expertise_txt{
+.main_pres_expertise_txt {
     display: flex;
     flex-direction: column;
     width: 50%;
 }
 
-#main_pres_expertise_img{
+.main_pres_expertise_img {
     width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#expertise_img {
+.expertise_img {
     width: 70%;
     height: 70%;
     object-fit: contain;
 }
-footer{
+
+footer {
     background-color: black;
     color: white;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
 }
-#footer_c1{
+
+.footer_c1 {
     background-color: black;
     color: white;
     display: flex;
@@ -164,7 +173,7 @@ footer{
     padding: 1rem;
 }
 
-#main_catalog{
+.main_catalog {
     background-color: black;
     color: white;
     display: flex;
@@ -174,14 +183,14 @@ footer{
     padding: 2rem;
 }
 
-#main_catalog_d1{
+.main_catalog_d1 {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-#footer_c1_nav{
+.footer_c1_nav {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -252,4 +261,109 @@ footer{
 
 .catalog-card a:hover {
     color: red;
+
+.main_pres_li li::marker {
+    color: red;
+}
+
+.bandeau {
+    background-color: black;
+    color: white;
+    height: 300px;
+    padding-top: 80px;
+    padding-left: 40px;
+}
+
+.bandeau h1 {
+    color: white;
+    font-size: 4rem;
+}
+
+.contact_section_s2 {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.contact_section_s2 > div {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.information {
+    padding-left: 40px;
+}
+
+.information h2 {
+    color: black;
+    margin-bottom: 1rem;
+}
+
+.form_info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.form_info label {
+    color: black;
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+}
+
+.mail_tel {
+    display: flex;
+    flex-direction: row;
+}
+
+.mail {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-right: 10px;
+}
+
+.tel {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+}
+
+.form_info input[type="text"],
+.form_info input[type="email"],
+.form_info input[type="tel"],
+.form_info textarea,
+.form_info select {
+    border: 1px solid gray;
+    background-color: rgb(238, 237, 237);
+    height: 40px;
+}
+
+.subject {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.message textarea {
+    height: 150px;
+    resize: none;
+}
+
+.envoyer_formulaire {
+    height: 40px;
 }
