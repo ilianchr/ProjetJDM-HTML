@@ -5,8 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
 function preRemplirSelect() {
   const params = new URLSearchParams(window.location.search);
   const origine = params.get("origine");
+  const selectModele = document.getElementById("modele");
 
-  if (origine) {
-    document.getElementById("modele").value = origine;
+  if (origine && selectModele) {
+    selectModele.value = origine;
   }
 }
