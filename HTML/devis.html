@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">    
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset = "UTF-8">
+        <title>Devis</title>
+        <link rel="stylesheet" href="../CSS/Style.css">
+    </head>
+    <body>
+        <header>
+            <nav class = "nav">
+                <h2>JDM MOTORS</h2>
+                <a href="acceuil.html">Accueil</a>
+                <a href="catalog.html">Catalogue</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </header>
+        <section class="bandeau">
+            <h3>DEMANDE DE DEVIS</h3>
+            <h1>Obtenez votre devis personnalisé</h1>
+            <p>Remplissez le formulaire ci-dessous et nous vous contacterons rapidement.</p>
+        </section>
+        <section >
+            <form class="devis_info">
+                <div class="name">
+                    <label for="name">Nom complet:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="mail_tel">
+                    <div class="mail">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="tel">
+                        <label for="tel">Téléphone:</label>
+                        <input type="tel" id="tel" name="tel" required>
+                    </div>
+                </div>
+                <div class="modele">
+                    <label for="modele">Véhicule d'intérêt:</label>
+                    <select id="modele" name="subject" required>
+                        <option value="">Sélectionnez un véhicule</option>
+                        <option value="R34">Nissan Skyline GT-R R34 - 145 000 €</option>
+                        <option value="R35">Nissan GT-R R35 - 95 000 €</option>
+                        <option value="MK4">Toyota Supra MK4 - 95 000 €</option>
+                        <option value="MK5">Toyota Supra MK5 - 105 000 €</option>
+                        <option value="NSX">Honda NSX - 78 000 €</option>
+                        <option value="RX7">Mazda RX-7 FD - 115 000 €</option>
+                    </select>
+                </div>
+                <div class="message">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <input type="button" class="envoyer_formulaire" value="Envoyer la demande">
+            </form>
+        </section>
+        <footer>
+            <hr>
+            <div class="footer_c1">
+                <div>
+                    <h2>JDM MOTORS</h2>
+                    <p>Spécialiste des voitures japonaises iconiques</p>
+                </div>
+                <div class="footer_c1_nav">
+                    <h3 class="title_h3">Navigation</h3>
+                    <a href="acceuil.html">Accueil</a>
+                    <a href="catalog.html">Catalogue</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div>
+                    <h3 class="title_h3">Contact</h3>
+                    <p>123 Rue de la Paix</p>
+                    <p>75000 Paris, France</p>
+                    <p>Tél: 01 23 45 67 89</p>
+                    <p>Email: info@jdm-motors.fr</p>
+                </div>
+            </div>
+            <hr>
+            <div>
+                <a href="a_propos.html">À propos</a>
+                <p>©️2026 JDM MOTORS. Tous droits réservés.</p>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -340,13 +340,18 @@ footer{
 .form_info input[type="email"],
 .form_info input[type="tel"],
 .form_info textarea,
-.form_info select {
+.form_info select,
+.devis_info input[type="text"],
+.devis_info input[type="email"],
+.devis_info input[type="tel"],
+.devis_info textarea,
+.devis_info select {
     border: 1px solid gray;
     background-color: rgb(238, 237, 237);
     height: 40px;
 }
 
-.subject {
+.subject,.modele {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -365,4 +370,14 @@ footer{
 
 .envoyer_formulaire {
     height: 40px;
+}
+
+.devis_info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 2rem;
+    padding-left : 300px;
+    padding-right : 300px;
+    margin-bottom: 50px;
 }
