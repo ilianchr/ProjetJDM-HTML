@@ -13,6 +13,7 @@
                 <a href="accueil.html">Accueil</a>
                 <a href="catalog.html">Catalogue</a>
                 <a href="contact.html">Contact</a>
+                <a href="profile.html">Mon Profil</a>
             </nav>
         </header>
         <section class="bandeau">
@@ -35,7 +36,7 @@
                 <p>Dimanche: Sur rendez-vous</p>
             </div>
             <div>
-                <form class="form_info">
+                <form class="form_info" onsubmit="soumettreContact(event)">
                     <div class="name">
                         <label for="name">Nom complet:</label>
                         <input type="text" id="name" name="name" required>
@@ -64,7 +65,7 @@
                         <label for="message">Message:</label>
                         <textarea id="message" name="message" required></textarea>
                     </div>
-                    <input class="envoyer_formulaire" type="button" value="Envoyer le message">
+                    <input class="envoyer_formulaire" type="submit" value="Envoyer le message">
                 </form>
             </div>
         </section>
@@ -94,5 +95,6 @@
                 <p>©️2026 JDM MOTORS. Tous droits réservés.</p>
             </div>
         </footer>
+        <script src="../JS/script.js"></script>
     </body>
 </html>

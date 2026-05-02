@@ -12,8 +12,7 @@
                 <h2>JDM MOTORS</h2>
                 <a href="accueil.html">Accueil</a>
                 <a href="catalog.html">Catalogue</a>
-                <a href="contact.html">Contact</a>
-            </nav>
+                <a href="contact.html">Contact</a>                <a href="profile.html">Mon Profil</a>            </nav>
         </header>
         <section class="bandeau">
             <h3>DEMANDE DE DEVIS</h3>
@@ -21,7 +20,7 @@
             <p>Remplissez le formulaire ci-dessous et nous vous contacterons rapidement.</p>
         </section>
         <section >
-            <form class="devis_info">
+            <form class="devis_info" onsubmit="soumettreDevis(event)">
                 <div class="name">
                     <label for="name">Nom complet:</label>
                     <input type="text" id="name" name="name" required>
@@ -52,7 +51,7 @@
                     <label for="message">Message:</label>
                     <textarea id="message" name="message" rows="5" required></textarea>
                 </div>
-                <input type="button" class="envoyer_formulaire" value="Envoyer la demande">
+                <input type="submit" class="envoyer_formulaire" value="Envoyer la demande">
             </form>
         </section>
         <footer>
