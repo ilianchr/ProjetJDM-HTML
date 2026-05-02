@@ -744,3 +744,58 @@ footer{
         font-size: 0.9rem;
     }
 }
+
+.profile-container {
+    background-color: black;
+    color: white;
+    padding: 2rem;
+    min-height: 60vh;
+}
+
+.profile-section {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.profile-section h2 {
+    color: red;
+    margin-bottom: 2rem;
+}
+
+.profile-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+}
+
+.profile-table thead th {
+    background-color: #222;
+    color: red;
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 2px solid red;
+}
+
+.profile-table tbody td {
+    padding: 1rem;
+    border-bottom: 1px solid #333;
+    color: #ccc;
+}
+
+.btn-small {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+.btn-small:hover {
+    background-color: darkred;
+}
+
+.profile-info {
+    text-align: center;
+    color: #ccc;
+}
