@@ -1,3 +1,4 @@
+/* BASE*/
 body {
     margin: 0;
     font-family: Helvetica, sans-serif;
@@ -21,6 +22,73 @@ img {
     gap: 1rem;
 }
 
+a{
+    color: white;
+    text-decoration: none;
+}
+
+hr{
+    background-color: gray;
+    margin: 2rem 0;
+}
+
+input[type="button"]{
+    color: white;
+    background-color: red;
+    border: none;
+    cursor: pointer;
+}
+
+h3 {
+    color: red;
+}
+
+.title_h3 {
+    color: red;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.bandeau {
+    background-color: black;
+    color: white;
+    min-height: 300px;
+    padding: 80px 40px 40px 40px;
+    box-sizing: border-box;
+}
+
+.bandeau h1 {
+    color: white;
+    font-size: clamp(2rem, 6vw, 4rem);
+}
+
+footer{
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.footer_c1{
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+.footer_c1_nav{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/*NAV BAR*/
 .nav {
     position: fixed;
     top: 0;
@@ -47,23 +115,8 @@ img {
 footer h2 {
     color: white;
 }
-a{
-    color: white;
-    text-decoration: none;
-}
 
-hr{
-    background-color: gray;
-    margin: 2rem 0;
-}
-
-input[type="button"]{
-    color: white;
-    background-color: red;
-    border: none;
-    cursor: pointer;
-}
-
+/*CATALOGUE*/
 .catalog-header {
     background-color: black;
     padding: 80px 2rem 4rem 2rem;
@@ -97,6 +150,7 @@ input[type="button"]{
     margin-right: auto;
 }
 
+/*ACCUEIL*/
 .main_pres_catalog {
     background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),url("../IMG/R34mainbg.png");
     background-position: center;
@@ -104,7 +158,7 @@ input[type="button"]{
     background-repeat: no-repeat;
 
     width: 100%;
-    min-height: 100vh;
+    min-height: calc(100vh - 80px);
 
     display: flex;
     justify-content: center;
@@ -120,17 +174,6 @@ input[type="button"]{
     width: 50%;
 }
 
-h3 {
-    color: red;
-}
-.title_h3 {
-    color: red;
-    margin-bottom: 2rem;
-    font-weight: bold;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-}
-
 .main_presc_h1 {
     color: white;
     font-size: clamp(2.5rem, 8vw, 6rem);
@@ -143,7 +186,6 @@ h3 {
     font-size: 1.2rem;
     margin-bottom: 2rem;
 }
-
 
 .main_presc_btn {
     margin-top: 2rem;
@@ -158,7 +200,6 @@ h3 {
     display: inline-block;
 }
 
-
 .main_pres_expertise{
     min-height: 100vh;
     display: flex;
@@ -166,7 +207,6 @@ h3 {
     padding: 2.5%;
     padding-top: 5%;
 }
-
 
 .main_pres_expertise_txt{
     display: flex;
@@ -179,28 +219,6 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.expertise_img {
-    width: 70%;
-    height: 70%;
-    object-fit: contain;
-}
-footer{
-    background-color: black;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-.footer_c1{
-    background-color: black;
-    color: white;
-    display: flex;
-    flex-direction: row;
-    align-items: top;
-    justify-content: space-around;
-    padding: 1rem;
 }
 
 .main_catalog{
@@ -220,11 +238,98 @@ footer{
     justify-content: center;
 }
 
-.footer_c1_nav{
+/*A PROPOS*/
+.a_propos_pres_catalog{
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+        url("../IMG/R34mainbg.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    width: 100%;
+    min-height: calc(100vh - 80px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 4rem 2rem;
+}
+
+.a_propos_pres_content{
+    width: 100%;
+    max-width: 900px;
+}
+
+.a_propos_pres_expertise {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4rem;
+    min-height: auto;
+    padding: 5% 5%;
+}
+
+.a_propos_pres_expertise_txt {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    flex: 1;
+    min-width: 0;
 }
+
+.a_propos_pres_expertise_img {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+}
+
+.a_propos_pres_expertise > .a_propos_pres_expertise_txt:only-child {
+    flex: none;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.a_propos_pres_li {
+    padding-left: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.expertise_img {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+}
+
+.a_propos_catalog {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5% 2rem;
+    min-height: auto;
+    text-align: center;
+}
+
+.a_propos_catalog_d1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
+}
+
+/*CATALOGUE*/
 
 #catalog_container {
     display: grid;
@@ -293,19 +398,7 @@ footer{
     color: red;
 }
 
-.bandeau {
-    background-color: black;
-    color: white;
-    min-height: 300px;
-    padding: 80px 40px 40px 40px;
-    box-sizing: border-box;
-}
-
-.bandeau h1 {
-    color: white;
-    font-size: clamp(2rem, 6vw, 4rem);
-}
-
+/*CONTACT*/
 .contact_section_s2 {
     display: flex;
     flex-direction: row;
@@ -409,8 +502,7 @@ footer{
     margin: 0 auto 50px auto;
 }
 
-
-
+/*DETAIL VOITURE*/
 
 .detail-page {
     display: flex;
@@ -581,6 +673,8 @@ footer{
     min-height: 60vh;
 }
 
+/*PROFILE*/
+
 .profile-section {
     max-width: 1200px;
     margin: 0 auto;
@@ -632,10 +726,7 @@ footer{
 }
 
 @media (max-width: 900px) {
-    #catalog_container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
+    /*ACCEUIL*/
     .main_pres_content {
         width: 80%;
     }
@@ -661,6 +752,32 @@ footer{
         width: 100%;
     }
 
+    #catalog_container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /*A PROPOS*/
+
+    .a_propos_pres_expertise {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    .a_propos_pres_expertise_txt,
+    .a_propos_pres_expertise_img {
+        width: 100%;
+        flex: none;
+    }
+
+    .a_propos_pres_expertise > .a_propos_pres_expertise_txt:only-child {
+        width: 100%;
+        max-width: none;
+    }
+
+    /*CONTACT*/
+
     .contact_section_s2 {
         flex-direction: column;
     }
@@ -668,6 +785,8 @@ footer{
     .contact_section_s2 > div {
         width: 100%;
     }
+
+    /*DETAIL VOITURE*/
 
     .detail-page {
         flex-direction: column;
@@ -708,6 +827,7 @@ footer{
 }
 
 @media (max-width: 600px) {
+    /*BASE*/
     #catalog_container {
         grid-template-columns: 1fr;
     }
@@ -729,37 +849,6 @@ footer{
         margin-right: 0;
     }
 
-    .main_pres_content {
-        width: 100%;
-    }
-
-    .main_pres_catalog {
-        min-height: auto;
-        padding: 3rem 1rem;
-    }
-
-    .main_presc_h1 {
-        font-size: 2.5rem;
-    }
-
-    .main_presc_p {
-        font-size: 1rem;
-    }
-
-    .information {
-        padding-left: 0;
-        padding: 0 1rem;
-    }
-
-    .contact_section_s2 {
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-
-    .catalog-header-title {
-        font-size: clamp(2rem, 6vw, 3.5rem);
-    }
-
     .bandeau {
         min-height: auto;
         padding: 3rem 1rem 2rem 1rem;
@@ -777,6 +866,65 @@ footer{
         margin: 0;
     }
 
+    .footer_c1 {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .footer_bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /*ACCEUIL*/
+
+    .main_pres_content {
+        width: 100%;
+    }
+
+    .main_pres_catalog {
+        min-height: auto;
+        padding: 3rem 1rem;
+    }
+
+    .main_presc_h1 {
+        font-size: 2.5rem;
+    }
+
+    .main_presc_p {
+        font-size: 1rem;
+    }
+
+    /*A PROPOS*/
+
+    .a_propos_pres_expertise {
+        padding: 1.5rem 1rem;
+    }
+
+    .a_propos_pres_catalog {
+        min-height: auto;
+        padding: 3rem 1rem;
+    }
+
+    .a_propos_pres_content {
+        width: 100%;
+    }
+
+    /*CONTACT*/
+
+    .information {
+        padding-left: 0;
+        padding: 0 1rem;
+    }
+
+    .contact_section_s2 {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .catalog-header-title {
+        font-size: clamp(2rem, 6vw, 3.5rem);
+    }
+
     .mail_tel {
         flex-direction: column;
     }
@@ -787,15 +935,9 @@ footer{
         padding-left: 0;
         padding-right: 0;
     }
-
-    .footer_c1 {
-        flex-direction: column;
-        gap: 2rem;
-    }
-    .footer_bottom {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+    
+    /*DETAIL VOITURE*/
+    
     .detail-page {
         flex-direction: column;
         padding: 1rem;
@@ -844,6 +986,3 @@ footer{
         font-size: 0.9rem;
     }
 }
-
-
-
