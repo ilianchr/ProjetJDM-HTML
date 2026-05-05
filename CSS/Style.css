@@ -3,6 +3,16 @@ body {
     font-family: Helvetica, sans-serif;
     padding-top: 80px;
 }
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 .footer_bottom {
     display: flex;
     justify-content: space-between;
@@ -127,7 +137,7 @@ h3 {
 
 .main_presc_h1 {
     color: white;
-    font-size: 6rem;
+    font-size: clamp(2.5rem, 8vw, 6rem);
     margin-top: 0;
     margin-bottom: 1rem;
 }
@@ -242,7 +252,7 @@ footer{
 
 .catalog-card img {
     width: 100%;
-    height: 300px;
+    height: clamp(200px, 25vw, 300px);
     object-fit: cover;
 }
 
@@ -297,7 +307,7 @@ footer{
 
 .bandeau h1 {
     color: white;
-    font-size: 4rem;
+    font-size: clamp(2rem, 6vw, 4rem);
 }
 
 .contact_section_s2 {
@@ -404,92 +414,8 @@ footer{
     margin-bottom: 50px;
 }
 
-@media (max-width: 900px) {
-    #catalog_container {
-        grid-template-columns: repeat(2, 1fr);
-    }
 
-    .main_pres_content {
-        width: 80%;
-    }
 
-    .main_presc_h1 {
-        font-size: 4rem;
-    }
-
-    .main_pres_expertise {
-        flex-direction: column;
-    }
-
-    .main_pres_expertise_txt,
-    .main_pres_expertise_img {
-        width: 100%;
-    }
-
-    .contact_section_s2 {
-        flex-direction: column;
-    }
-
-    .contact_section_s2 > div {
-        width: 100%;
-    }
-
-    .devis_info {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-}
-
-@media (max-width: 600px) {
-    #catalog_container {
-        grid-template-columns: 1fr;
-    }
-
-    .nav {
-        height: auto;
-        flex-wrap: wrap;
-        padding: 1rem;
-    }
-
-    body {
-        padding-top: 100px;
-    }
-
-    .main_presc_h1 {
-        font-size: 2.8rem;
-    }
-
-    .catalog-header-title {
-        font-size: 2.5rem;
-    }
-
-    .bandeau h1 {
-        font-size: 2.5rem;
-    }
-
-    .mail_tel {
-        flex-direction: column;
-    }
-
-    .mail,
-    .tel {
-        width: 100%;
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    .footer_c1 {
-        flex-direction: column;
-        gap: 2rem;
-    }
-}
-
-@media (max-width: 600px) {
-    .footer_bottom {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-}
 
 .detail-page {
     display: flex;
@@ -548,7 +474,7 @@ footer{
 
 .detail-info h1 {
     color: white;
-    font-size: 3rem;
+    font-size: clamp(1.5rem, 5vw, 3rem);
     font-weight: bold;
     margin: 0;
     line-height: 1.2;
@@ -653,98 +579,6 @@ footer{
     border-color: red;
 }
 
-@media (max-width: 900px) {
-    .detail-page {
-        flex-direction: row;
-        gap: 1rem;
-        padding: 1.5rem;
-    }
-
-    .detail-hero {
-        width: 40%;
-    }
-
-    .detail-container {
-        width: 60%;
-    }
-
-    .detail-info h1 {
-        font-size: 2rem;
-    }
-
-    .detail-price {
-        font-size: 1.8rem;
-    }
-
-    .detail-hero img {
-        max-height: 400px;
-    }
-
-    .detail-buttons {
-        flex-direction: column;
-    }
-
-    .btn-primary,
-    .btn-secondary {
-        width: 100%;
-        text-align: center;
-    }
-
-    .detail-buttons form {
-        width: 100%;
-    }
-}
-
-@media (max-width: 600px) {
-    .detail-page {
-        flex-direction: column;
-        padding: 1rem;
-        gap: 1.5rem;
-    }
-
-    .detail-hero {
-        width: 100%;
-    }
-
-    .detail-container {
-        width: 100%;
-        padding: 0;
-    }
-
-    .detail-info h1 {
-        font-size: 1.5rem;
-    }
-
-    .detail-price {
-        font-size: 1.3rem;
-    }
-
-    .detail-hero img {
-        max-height: 250px;
-    }
-
-    .detail-info h2 {
-        font-size: 1.2rem;
-        margin-top: 1.5rem;
-    }
-
-    .spec-label,
-    .spec-value {
-        font-size: 0.9rem;
-        padding: 0.75rem 0;
-    }
-
-    .spec-label {
-        width: 50%;
-    }
-
-    .btn-primary,
-    .btn-secondary {
-        padding: 0.75rem 1.5rem;
-        font-size: 0.9rem;
-    }
-}
-
 .profile-container {
     background-color: black;
     color: white;
@@ -799,3 +633,198 @@ footer{
     text-align: center;
     color: #ccc;
 }
+
+@media (max-width: 900px) {
+    #catalog_container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .main_pres_content {
+        width: 80%;
+    }
+
+    .main_presc_h1 {
+        font-size: 4rem;
+    }
+
+    .main_pres_expertise {
+        flex-direction: column;
+    }
+
+    .main_pres_expertise_txt,
+    .main_pres_expertise_img {
+        width: 100%;
+    }
+
+    .contact_section_s2 {
+        flex-direction: column;
+    }
+
+    .contact_section_s2 > div {
+        width: 100%;
+    }
+
+    .devis_info {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .detail-page {
+        flex-direction: row;
+        gap: 1rem;
+        padding: 1.5rem;
+    }
+
+    .detail-hero {
+        width: 40%;
+    }
+
+    .detail-container {
+        width: 60%;
+    }
+
+    .detail-info h1 {
+        font-size: 2rem;
+    }
+
+    .detail-price {
+        font-size: 1.8rem;
+    }
+
+    .detail-hero img {
+        max-height: 400px;
+    }
+
+    .detail-buttons {
+        flex-direction: column;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        text-align: center;
+    }
+
+    .detail-buttons form {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    #catalog_container {
+        grid-template-columns: 1fr;
+    }
+
+    .nav {
+        position: static;
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        padding-bottom: 5%;
+    }
+
+    body {
+        padding-top: 0;
+    }
+
+    .nav h2 {
+        margin-right: 0;
+    }
+
+    .main_pres_content {
+        width: 100%;
+    }
+
+    .main_pres_catalog {
+        min-height: auto;
+        padding: 3rem 1rem;
+    }
+
+    .main_presc_h1 {
+        font-size: 2.5rem;
+    }
+
+    .main_presc_p {
+        font-size: 1rem;
+    }
+
+
+    .catalog-header-title {
+        font-size: clamp(2rem, 6vw, 3.5rem);
+    }
+
+    .bandeau h1 {
+        font-size: 2.5rem;
+    }
+
+    .mail_tel {
+        flex-direction: column;
+    }
+
+    .mail,
+    .tel {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .footer_c1 {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .footer_bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .detail-page {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1.5rem;
+    }
+
+    .detail-hero {
+        width: 100%;
+    }
+
+    .detail-container {
+        width: 100%;
+        padding: 0;
+    }
+
+    .detail-info h1 {
+        font-size: 1.5rem;
+    }
+
+    .detail-price {
+        font-size: 1.3rem;
+    }
+
+    .detail-hero img {
+        max-height: 250px;
+    }
+
+    .detail-info h2 {
+        font-size: 1.2rem;
+        margin-top: 1.5rem;
+    }
+
+    .spec-label,
+    .spec-value {
+        font-size: 0.9rem;
+        padding: 0.75rem 0;
+    }
+
+    .spec-label {
+        width: 50%;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+
+
